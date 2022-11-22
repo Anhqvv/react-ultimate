@@ -1,15 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+import User from "./components/User/User";
+import Admin from "./components/Admin/Admin";
 import reportWebVitals from "./reportWebVitals";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 ReactDOM.render(
    <React.StrictMode>
       <Router>
-         <App />
+         <Routes>
+            <Route path="/" element={<App />} />
+            <Route path="/users" element={<User />} />
+            <Route path="/admins" element={<Admin />} />
+         </Routes>
       </Router>
    </React.StrictMode>,
    document.getElementById("root")
