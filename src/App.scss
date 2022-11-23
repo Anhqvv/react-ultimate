@@ -1,6 +1,7 @@
 .app-container {
    .header-container {
       .navbar-nav {
+         z-index: 1;
          .nav-link {
             &.active {
                color: #00bff0;
@@ -8,4 +9,10 @@
          }
       }
    }
+}
+
+video {
+   position: fixed;
+   bottom: 0;
+width: 100vw;
 }
