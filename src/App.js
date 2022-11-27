@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import "./App.scss";
+import Admin from "./components/Admin/Admin";
 import Header from "./components/Header/Header";
 function App() {
    return (
@@ -9,7 +10,9 @@ function App() {
                <Header />
             </div>
             <div className="main-container">
-               <div className="sidebar-container"></div>
+               <div className="sidebar-container">
+                  {/* <Admin/> */}
+               </div>
                <div className="app-content">
                   <Outlet/>
                </div>
