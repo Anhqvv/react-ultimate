@@ -8,16 +8,21 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./components/Home/HomePage";
+import ManageUser from "./components/Admin/Content/ManageUser";
+import Dashboard from "./components/Admin/Content/Dashboard";
 
 ReactDOM.render(
    <React.StrictMode>
       <Router>
          <Routes>
             <Route path="/" element={<App />}>
-               <Route index element={<Admin />} />
+               <Route index element={<HomePage />} />
                <Route path="/users" element={<User />} />
             </Route>
-            <Route path="/admins" element={<Admin />} />
+            <Route path="/admins" element={<Admin />}>
+               <Route index element={<Dashboard />} />
+               <Route path="manage-users" element={<ManageUser />} />
+            </Route>
          </Routes>
       </Router>
    </React.StrictMode>,
